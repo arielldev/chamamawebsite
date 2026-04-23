@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'FbElectronSansHeb';
+  src: url('./assets/brand/fonts/FbElectronSansHeb-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FbElectronConHeb';
+  src: url('./assets/brand/fonts/FbElectronConHeb-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Variable';
+  src: url('./assets/brand/fonts/OpenSans-Variable.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Variable';
+  src: url('./assets/brand/fonts/OpenSans-Italic-Variable.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+}
+
+:root {
+  --bg-primary: #f5f8f7;
+  --bg-secondary: #eef3f1;
+  --primary-green: #5a8b7d;
+  --primary-green-dark: #3d5f54;
+  --accent-sage: #7a9d8f;
+  --accent-warm: #a68f7f;
+  --ink-primary: #2d3d38;
+  --ink-secondary: #5a6f69;
+  --ink-tertiary: #7a8f87;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Open Sans Variable', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f8f7 0%, #eef3f1 50%, #f0f4f2 100%);
+  color: var(--ink-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(90, 139, 125, 0.28);
+  color: var(--ink-primary);
+}
+
+::-moz-selection {
+  background: rgba(90, 139, 125, 0.28);
+  color: var(--ink-primary);
+}
+
+.font-brand {
+  font-family: 'FbElectronConHeb', 'FbElectronSansHeb', 'Open Sans Variable', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Subtle animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(90, 139, 125, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(90, 139, 125, 0.2);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(122, 157, 143, 0.14);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-sage) 0%, var(--primary-green) 100%);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green-dark);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: var(--primary-green) rgba(122, 157, 143, 0.14);
+  scrollbar-width: thin;
+}

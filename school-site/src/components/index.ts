@@ -1,0 +1,8 @@
+export { TextHighlight } from './TextHighlight'
+export { Header } from './Header'
+export { Hero } from './Hero'
+export { Vision } from './Vision'
+export { Domains } from './Domains'
+export { Ikigai } from './Ikigai'
+export { CTA } from './CTA'
+export { Footer } from './Footer'
