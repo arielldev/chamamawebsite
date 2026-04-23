@@ -1,6 +1,3 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "school-site/dist",
-  "installCommand": "cd school-site && npm install",
   "framework": "vite"
 }
