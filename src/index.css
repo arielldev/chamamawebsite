@@ -29,15 +29,18 @@
 }
 
 :root {
-  --bg-primary: #f5f8f7;
-  --bg-secondary: #eef3f1;
-  --primary-green: #5a8b7d;
-  --primary-green-dark: #3d5f54;
-  --accent-sage: #7a9d8f;
-  --accent-warm: #a68f7f;
-  --ink-primary: #2d3d38;
-  --ink-secondary: #5a6f69;
-  --ink-tertiary: #7a8f87;
+  --bg-primary: #166534;
+  --bg-secondary: #14532d;
+  --page-background: var(--bg-primary);
+  --surface-green-light: #b7d9c0;
+  --surface-green-soft: #93c5a1;
+  --primary-green: #16a34a;
+  --primary-green-dark: #15803d;
+  --accent-sage: #86efac;
+  --accent-warm: #4ade80;
+  --ink-primary: #ffffff;
+  --ink-secondary: #dcfce7;
+  --ink-tertiary: #bbf7d0;
 }
 
 * {
@@ -53,20 +56,24 @@ body,
 
 body {
   font-family: 'Open Sans Variable', 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f5f8f7 0%, #eef3f1 50%, #f0f4f2 100%);
+  background: var(--page-background);
   color: var(--ink-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-page-sync {
+  background: var(--page-background);
+}
+
 ::selection {
-  background: rgba(90, 139, 125, 0.28);
+  background: rgba(134, 239, 172, 0.35);
   color: var(--ink-primary);
 }
 
 ::-moz-selection {
-  background: rgba(90, 139, 125, 0.28);
+  background: rgba(134, 239, 172, 0.35);
   color: var(--ink-primary);
 }
 
@@ -89,10 +96,10 @@ body {
 
 @keyframes subtle-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(90, 139, 125, 0.1);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.12);
   }
   50% {
-    box-shadow: 0 0 30px rgba(90, 139, 125, 0.2);
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.26);
   }
 }
 
@@ -111,7 +118,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(122, 157, 143, 0.14);
+  background: rgba(20, 83, 45, 0.55);
   border-radius: 999px;
 }
 
@@ -132,6 +139,6 @@ body {
 
 /* Firefox scrollbar */
 * {
-  scrollbar-color: var(--primary-green) rgba(122, 157, 143, 0.14);
+  scrollbar-color: var(--primary-green) rgba(20, 83, 45, 0.55);
   scrollbar-width: thin;
 }
